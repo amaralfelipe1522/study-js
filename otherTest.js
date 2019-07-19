@@ -11,9 +11,6 @@ let game2 = new GameDetail ("Mario 64", "Nintendo", 1996);
 console.log(game1);
 console.log(game2);
 
-
-
-
 function dog (breed, name, year, vaccinated) {
     this.dogBreed = breed;
     this.dogName = name;
@@ -31,8 +28,8 @@ console.log(typeof dog1);
 
 let arr = [1, 2, 3];
 console.log(typeof arr);
-
 */
+
 
 //Passing Values By Reference
 let x = 1;
@@ -42,3 +39,7 @@ console.log(x, y+1);
 x = { p: 4 };
 y = x;
 console.log(x.p, y.p);
+
+//Scope Quirks
+
+
