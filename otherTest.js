@@ -30,7 +30,7 @@ let arr = [1, 2, 3];
 console.log(typeof arr);
 */
 
-
+/*
 //Passing Values By Reference
 let x = 1;
 let y = x;
@@ -39,6 +39,17 @@ console.log(x, y+1);
 x = { p: 4 };
 y = x;
 console.log(x.p, y.p);
+*/
 
 //Scope Quirks
 //Primitive Types
+//Template Strings
+let n = 0;
+console.log(`O loop passou por ${n} vezes`);
+//Example with Ternary Operator:
+for (let manchete = 0; manchete < 4; manchete++) {
+    //let first = (manchete == 1);
+    let is = manchete == 1 ? "É" : "São";
+    let person = manchete == 1 ? "" : "s";
+    console.log(`${is} ${manchete} pessoa${person} enganada${person}`);
+}
