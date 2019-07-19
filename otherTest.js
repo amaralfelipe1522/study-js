@@ -41,5 +41,4 @@ y = x;
 console.log(x.p, y.p);
 
 //Scope Quirks
-
-
+//Primitive Types
