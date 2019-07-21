@@ -41,6 +41,7 @@ y = x;
 console.log(x.p, y.p);
 */
 
+/*
 //Scope Quirks
 //Primitive Types
 //Template Strings
@@ -53,3 +54,21 @@ for (let manchete = 0; manchete < 4; manchete++) {
     let person = manchete == 1 ? "" : "s";
     console.log(`${is} ${manchete} pessoa${person} enganada${person}`);
 }
+*/
+
+/*
+// Constructors And Instances
+let FrangoFrito = function(){
+    this.qtdFrangoFrito = 0;
+    this.fritar = function(){
+        console.log("Fritando o frango...");
+        this.qtdFrangoFrito++;
+    } 
+}
+
+let frangoFrito = new FrangoFrito();
+
+frangoFrito.fritar();
+console.log(frangoFrito.qtdFrangoFrito);
+
+*/
