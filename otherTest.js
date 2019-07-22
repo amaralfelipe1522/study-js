@@ -72,3 +72,34 @@ frangoFrito.fritar();
 console.log(frangoFrito.qtdFrangoFrito);
 
 */
+
+/*
+//Return Annonymous Function 
+var plus = (function (){
+    var counter = 0;
+	return function (){
+        counter++;
+        return counter;
+    }
+})();
+
+plus();
+*/
+
+/*
+//Class
+class dog {
+    constructor (nameDog, ageDog) {
+        this.nameDog = nameDog;
+        this.ageDog = ageDog;
+    }
+    //method () {
+    //    console.log(this.nameDog);
+    //    console.log(this.ageDog);
+    //}
+}
+
+dog1 = new dog("Shaman",12)
+console.log(dog1);
+
+*/
