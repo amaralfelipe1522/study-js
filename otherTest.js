@@ -78,6 +78,7 @@ console.log(frangoFrito.qtdFrangoFrito);
 */
 
 /*
+<<<<<<< HEAD
 let hamburguer = {
     carne: "bovina",
     salada: true,
@@ -134,4 +135,34 @@ function somarComanda (...comandas){
 somarComanda(nota1,nota2);
 
 //[1,2,3,4,5].reduce((accumulator,currentVal)=>accumulator+currentVal)
+=======
+//Return Annonymous Function 
+var plus = (function (){
+    var counter = 0;
+	return function (){
+        counter++;
+        return counter;
+    }
+})();
+
+plus();
+*/
+
+/*
+//Class
+class dog {
+    constructor (nameDog, ageDog) {
+        this.nameDog = nameDog;
+        this.ageDog = ageDog;
+    }
+    //method () {
+    //    console.log(this.nameDog);
+    //    console.log(this.ageDog);
+    //}
+}
+
+dog1 = new dog("Shaman",12)
+console.log(dog1);
+
+>>>>>>> 0bb49ede7b6fe7cdc2d895dc73a23bf0a3ff2811
 */
