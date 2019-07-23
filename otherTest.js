@@ -45,8 +45,8 @@ console.log(x.p, y.p);
 //Scope Quirks
 //Primitive Types
 //Template Strings
-let n = 0;
-console.log(`O loop passou por ${n} vezes`);
+//let n = 0;
+//console.log(`O loop passou por ${n} vezes`);
 //Example with Ternary Operator:
 for (let manchete = 0; manchete < 4; manchete++) {
     //let first = (manchete == 1);
@@ -54,6 +54,10 @@ for (let manchete = 0; manchete < 4; manchete++) {
     let person = manchete == 1 ? "" : "s";
     console.log(`${is} ${manchete} pessoa${person} enganada${person}`);
 }
+
+var num = 3;
+let result = num = 1 ? "Não é UM" : "É UM"
+console.log (result);
 */
 
 /*
@@ -71,4 +75,63 @@ let frangoFrito = new FrangoFrito();
 frangoFrito.fritar();
 console.log(frangoFrito.qtdFrangoFrito);
 
+*/
+
+/*
+let hamburguer = {
+    carne: "bovina",
+    salada: true,
+    bacon: true,
+    molho: "cheddar"
+};
+delete hamburguer.salada;
+
+console.log (hamburguer);
+
+console.log("salada" in hamburguer);
+*/
+
+/*
+//spread
+let arr1 = [1,2,3,4];
+let arr2 = [4,5,6,7];
+console.log(arr1);
+
+arr1.push(...arr2);
+console.log(arr1);
+*/
+
+
+/*
+//Rest Example
+function fDecente(...arrayDeItens){
+	console.log(arrayDeItens.length)
+	arrayDeItens.map(function(ItemDoArray){
+		console.log(ItemDoArray);
+	})
+}
+*/
+
+/*
+nota1 = {
+    preço: 200,
+    nome: "hamburguer"
+}
+
+nota2 = {
+    preço: 300,
+    nome: "hamburguerxx"
+}
+
+function somarComanda (...comandas){
+    //console.log(comandas[0])
+    comandas.map (function(comanda){
+        console.log(comanda);
+        console.log(Math.max(comanda.preço))
+    });
+}
+
+somarComanda(nota1,nota2);
+
+//[1,2,3,4,5].reduce((accumulator,currentVal)=>accumulator+currentVal)
 */
