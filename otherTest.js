@@ -166,3 +166,44 @@ dog1 = new dog("Shaman",12)
 console.log(dog1);
 */
 
+/*
+//V1 - PUSH, MAP and Object
+let myCart = [];
+
+function addMyCart (item) {
+    myCart.push(item);
+    let myCartResult = myCart.map((item,index) => {
+        console.log(`O ${item} foi adicionado na posição ${index+1}`);
+        return `${index+1}:${item}`;
+    });
+    console.log(myCartResult);
+}
+
+
+addMyCart("Book 2");
+addMyCart("Book 1");
+addMyCart("Book 3");
+*/
+
+/*
+//V2 - PUSH, MAP and Object
+let myCart = [];
+let myCartResult;
+
+function addMyCart (...item) {
+    myCart.push(...item);
+    myCartResult = myCart.map((item,index) => {
+        console.log(`O ${item} foi adicionado na posição ${index+1}`);
+        return {index : index+1, item : item};
+    });
+}
+
+addMyCart("Book 1","Book 2","Book 3");
+console.log(myCartResult);
+*/
+
+let functionRest = (...items) => items.map(item => console.log(items));
+
+functionRest("A","B")
+
+console.log(functionRest[0]);
