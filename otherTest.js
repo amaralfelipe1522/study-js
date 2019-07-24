@@ -200,10 +200,25 @@ function addMyCart (...item) {
 
 addMyCart("Book 1","Book 2","Book 3");
 console.log(myCartResult);
+
+
+//let functionRest = (...items) => items.map(item => console.log(items));
+//functionRest("A","B")
+
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+
+let arrAll.push = (arr1,arr2);
+console.log(arrAll);
+
 */
 
-let functionRest = (...items) => items.map(item => console.log(items));
+//Function SUM com REST
+function somar (...valores) {
+    let valorSomado = 0;
+    for (let valor of valores)
+        valorSomado += valor;
+        return valorSomado;
+}
 
-functionRest("A","B")
-
-console.log(functionRest[0]);
+somar(2,2);
