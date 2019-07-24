@@ -213,12 +213,19 @@ console.log(arrAll);
 
 */
 
-//Function SUM com REST
-function somar (...valores) {
-    let valorSomado = 0;
-    for (let valor of valores)
-        valorSomado += valor;
-        return valorSomado;
-}
+// //Function SUM com REST
+// function somar (...valores) {
+//     let valorSomado = 0;
+//     for (let valor of valores)
+//         valorSomado += valor;
+//         return valorSomado;
+// }
+// somar(2,2);
 
-somar(2,2);
+// //Other example
+// let arr = [1,2,3,4,5,6];
+// let somaArr = 0;
+// for (let unit of arr){
+//     somaArr += unit;
+// }
+// console.log(somaArr);
