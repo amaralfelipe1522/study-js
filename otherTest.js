@@ -229,3 +229,22 @@ console.log(arrAll);
 //     somaArr += unit;
 // }
 // console.log(somaArr);
+
+// //Calculator with ARRAY.REDUCE:
+// //let somar1 = (...valores) => valores.reduce((valorA, valorB) => valorA + valorB, 0);
+// //console.log(somar1(1,2,3,4));
+
+// let arr = [1,2,3,4];
+// let somaArr = arr.reduce((x,y) => x+y,3);
+// console.log(somaArr);
+
+//Example of ARRAY.FILTER - Retira os valores repetidos
+let arrAll = [1,2,2,3,4,5,5];
+// let arrDistinct = arrAll.filter (
+//     function (valor, i, arrAll) {
+//         return arrAll.indexOf(valor)===i
+//     }
+// );
+//With arrow function
+let arrDistinct = arrAll.filter ((valor, i, arrAll) => arrAll.indexOf(valor)===i);
+console.log(arrDistinct);
