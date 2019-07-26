@@ -249,17 +249,38 @@ console.log(arrAll);
 // let arrDistinct = arrAll.filter ((valor, i, arrAll) => arrAll.indexOf(valor)===i);
 // console.log(arrDistinct);
 
-let cuzoesDoUltra = {
-    Oxiteno:{
-        1:"João",
-        2:"Giba"
-    },
-    Corp:{
-        1:"Marilia",
-        2:"Evandro"
-    }
-    };
+// //Destructuring Assignment 
+// let cuzoesDoUltra = {
+//     Oxiteno:{
+//         1:"João",
+//         2:"Giba"
+//     },
+//     Corp:{
+//         1:"Marilia",
+//         2:"Evandro"
+//     }
+//     };
 
-let  {Oxiteno} = cuzoesDoUltra;
-console.log(cuzoesDoUltra);
-console.log(Oxiteno);
+// let  {Oxiteno} = cuzoesDoUltra;
+// console.log(cuzoesDoUltra);
+// console.log(Oxiteno);
+
+// Example of closure
+let sexta, sabado, domingo, segunda;
+
+function calcularFelicidade (){
+    // Morto por dentro tipo o Marcelo: 0
+    // Feliz com força e com talento: 10
+    console.log ("Iniciando a função calcularFelicidade()");
+    let vontadeDeViver = 9;
+    sexta = () => { console.log (`Nível na sexta: ${vontadeDeViver}`) }
+    sabado = () => { console.log (`Nível no sabado: ${vontadeDeViver = vontadeDeViver + 1}`) }
+    domingo = () => { console.log (`Nível no domingo: ${vontadeDeViver = vontadeDeViver - 8}`)}
+    segunda = () => { console.log (`Nível na segunda: ${vontadeDeViver = vontadeDeViver = null}`)}
+}
+
+calcularFelicidade();
+sexta();
+sabado();
+domingo();
+segunda();
