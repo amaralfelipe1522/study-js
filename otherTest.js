@@ -238,13 +238,28 @@ console.log(arrAll);
 // let somaArr = arr.reduce((x,y) => x+y,3);
 // console.log(somaArr);
 
-//Example of ARRAY.FILTER - Retira os valores repetidos
-let arrAll = [1,2,2,3,4,5,5];
-// let arrDistinct = arrAll.filter (
-//     function (valor, i, arrAll) {
-//         return arrAll.indexOf(valor)===i
-//     }
-// );
-//With arrow function
-let arrDistinct = arrAll.filter ((valor, i, arrAll) => arrAll.indexOf(valor)===i);
-console.log(arrDistinct);
+// //Example of ARRAY.FILTER - Retira os valores repetidos
+// let arrAll = [1,2,2,3,4,5,5];
+// // let arrDistinct = arrAll.filter (
+// //     function (valor, i, arrAll) {
+// //         return arrAll.indexOf(valor)===i
+// //     }
+// // );
+// //With arrow function
+// let arrDistinct = arrAll.filter ((valor, i, arrAll) => arrAll.indexOf(valor)===i);
+// console.log(arrDistinct);
+
+let cuzoesDoUltra = {
+    Oxiteno:{
+        1:"João",
+        2:"Giba"
+    },
+    Corp:{
+        1:"Marilia",
+        2:"Evandro"
+    }
+    };
+
+let  {Oxiteno} = cuzoesDoUltra;
+console.log(cuzoesDoUltra);
+console.log(Oxiteno);
