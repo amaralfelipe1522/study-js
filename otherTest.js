@@ -331,17 +331,37 @@ console.log(arrAll);
 // let sizeArity = aridade.length;
 // console.log(sizeArity);
 
-//Example of Curried Function
-let jogos1 = function (nome1){
-    console.log (`Meu jogo favorito é ${nome1}.`)
-    return function (nome2){
-        console.log(`Meus jogos favoritos são ${nome1} e ${nome2}.`);
-        return function (nome3){
-            console.log(`Meus jogos favoritos são ${nome1}, ${nome2} e ${nome3}.`);
-        }
-    }
+// //Example of Curried Function
+// let jogos1 = function (nome1){
+//     console.log (`Meu jogo favorito é ${nome1}.`)
+//     return function (nome2){
+//         console.log(`Meus jogos favoritos são ${nome1} e ${nome2}.`);
+//         return function (nome3){
+//             console.log(`Meus jogos favoritos são ${nome1}, ${nome2} e ${nome3}.`);
+//         }
+//     }
+// }
+
+// let jogos2 = jogos1("Mario");
+// let jogos3 = jogos2("Zelda");
+// jogos3("Metroid");
+
+// //Example of FOR LOOP
+// let gamesToBeat = 0;
+// function jogar (...games){
+//     for (i = 1; i <= games.length; i++){
+//         gamesToBeat += 1;
+//     }
+//     console.log(`Qtd de jogos para finalizar: ${gamesToBeat}`);
+// }
+
+// jogar ("Mario","Zelda","Metroid");
+
+function jogar (...games){
+    let gamesToBeat = games.reduce((valor1, valor2) => valor1 + ", " + valor2);
+    console.log(`Jogos para finalizar: ${gamesToBeat}`);
+    console.log(`Qtd de jogos para finalizar: ${games.length}`);
 }
 
-let jogos2 = jogos1("Mario");
-let jogos3 = jogos2("Zelda");
-jogos3("Metroid");
+jogar ("Mario","Zelda","Metroid");
+
