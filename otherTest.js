@@ -266,21 +266,57 @@ console.log(arrAll);
 // console.log(Oxiteno);
 
 // Example of closure
-let sexta, sabado, domingo, segunda;
+// let sexta, sabado, domingo, segunda;
 
-function calcularFelicidade (){
-    // Morto por dentro tipo o Marcelo: 0
-    // Feliz com força e com talento: 10
-    console.log ("Iniciando a função calcularFelicidade()");
-    let vontadeDeViver = 9;
-    sexta = () => { console.log (`Nível na sexta: ${vontadeDeViver}`) }
-    sabado = () => { console.log (`Nível no sabado: ${vontadeDeViver = vontadeDeViver + 1}`) }
-    domingo = () => { console.log (`Nível no domingo: ${vontadeDeViver = vontadeDeViver - 8}`)}
-    segunda = () => { console.log (`Nível na segunda: ${vontadeDeViver = vontadeDeViver = null}`)}
+// function calcularFelicidade (){
+//     // Morto por dentro tipo o Marcelo: 0
+//     // Feliz com força e com talento: 10
+//     console.log ("Iniciando a função calcularFelicidade()");
+//     let vontadeDeViver = 9;
+//     sexta = () => { console.log (`Nível na sexta: ${vontadeDeViver}`) }
+//     sabado = () => { console.log (`Nível no sabado: ${vontadeDeViver = vontadeDeViver + 1}`) }
+//     domingo = () => { console.log (`Nível no domingo: ${vontadeDeViver = vontadeDeViver - 8}`)}
+//     segunda = () => { console.log (`Nível na segunda: ${vontadeDeViver = vontadeDeViver = null}`)}
+// }
+
+// calcularFelicidade();
+// sexta();
+// sabado();
+// domingo();
+// segunda();
+
+//Other example of Closure
+let get = null;
+
+function ClosureDoCapeta (){
+    this.valor = 0;
+    get = () => this.valor;
+
+    function aumentar (){
+        this.valor++;
+        console.log(`Aumentando: ${this.valor}`);
+    }
+    function diminuir (){
+        this.valor--;
+        console.log(`Diminuindo: ${this.valor}`);
+    }
+    function deletar (){
+        delete this.valor;
+        console.log(`Valor deletado: ${this.valor=null}`);
+    }
+
+    return [aumentar,diminuir,deletar];
 }
 
-calcularFelicidade();
-sexta();
-sabado();
-domingo();
-segunda();
+let f = ClosureDoCapeta();
+
+let aument = f[0];
+let dimin = f[1];
+let del = f[2];
+
+aument();
+aument();
+aument();
+dimin();
+dimin();
+del();
