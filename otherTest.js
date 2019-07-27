@@ -285,38 +285,63 @@ console.log(arrAll);
 // domingo();
 // segunda();
 
-//Other example of Closure
-let get = null;
+// //Other example of Closure
+// let get = null;
 
-function ClosureDoCapeta (){
-    this.valor = 0;
-    get = () => this.valor;
+// function ClosureDoCapeta (){
+//     this.valor = 0;
+//     get = () => {console.log(this.valor);}
 
-    function aumentar (){
-        this.valor++;
-        console.log(`Aumentando: ${this.valor}`);
-    }
-    function diminuir (){
-        this.valor--;
-        console.log(`Diminuindo: ${this.valor}`);
-    }
-    function deletar (){
-        delete this.valor;
-        console.log(`Valor deletado: ${this.valor=null}`);
-    }
+//     function aumentar (){
+//         this.valor++;
+//         console.log(`Aumentando: ${this.valor}`);
+//     }
+//     function diminuir (){
+//         this.valor--;
+//         console.log(`Diminuindo: ${this.valor}`);
+//     }
+//     function deletar (){
+//         delete this.valor;
+//         console.log(`Valor deletado: ${this.valor=null}`);
+//     }
 
-    return [aumentar,diminuir,deletar];
+//     return [aumentar,diminuir,deletar];
+// }
+
+// let f = ClosureDoCapeta();
+
+// let aument = f[0];
+// let dimin = f[1];
+// let del = f[2];
+
+// aument();
+// aument();
+// aument();
+// dimin();
+// dimin();
+// del();
+// get();
+
+// //Example of Arity
+// function aridade (...args) {
+//     console.log(args);
+// }
+// aridade(1,2,3);
+
+// let sizeArity = aridade.length;
+// console.log(sizeArity);
+
+//Example of Curried Function
+let jogos1 = function (nome1){
+    console.log (`Meu jogo favorito é ${nome1}.`)
+    return function (nome2){
+        console.log(`Meus jogos favoritos são ${nome1} e ${nome2}.`);
+        return function (nome3){
+            console.log(`Meus jogos favoritos são ${nome1}, ${nome2} e ${nome3}.`);
+        }
+    }
 }
 
-let f = ClosureDoCapeta();
-
-let aument = f[0];
-let dimin = f[1];
-let del = f[2];
-
-aument();
-aument();
-aument();
-dimin();
-dimin();
-del();
+let jogos2 = jogos1("Mario");
+let jogos3 = jogos2("Zelda");
+jogos3("Metroid");
