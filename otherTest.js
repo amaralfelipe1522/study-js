@@ -379,16 +379,17 @@ console.log(arrAll);
 //     let cont = i == 1 ? "" : console.log (i);
 // }
 
-// // //For Loop with break
+// //For Loop with break
 // for (i = 0; i < 5; i++){
 //     if (i > 3){
 //         break;
 //     } console.log(i);
 // }
 
-forX: for (x = 0; x < 2; x++){
-    forY: for (y = x; y < 2; y++){
-        console.log (x, y);
-        break forY;
-    }
-}
+// //For Loop with label and break
+// forX: for (x = 0; x < 2; x++){
+//     forY: for (y = x; y < 2; y++){
+//         console.log (x, y);
+//         break forY;
+//     }
+// }
