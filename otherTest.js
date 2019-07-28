@@ -346,7 +346,7 @@ console.log(arrAll);
 // let jogos3 = jogos2("Zelda");
 // jogos3("Metroid");
 
-// //Example of FOR LOOP
+// //Examples of FOR LOOP
 // let gamesToBeat = 0;
 // function jogar (...games){
 //     for (i = 1; i <= games.length; i++){
@@ -354,14 +354,41 @@ console.log(arrAll);
 //     }
 //     console.log(`Qtd de jogos para finalizar: ${gamesToBeat}`);
 // }
-
 // jogar ("Mario","Zelda","Metroid");
 
-function jogar (...games){
-    let gamesToBeat = games.reduce((valor1, valor2) => valor1 + ", " + valor2);
-    console.log(`Jogos para finalizar: ${gamesToBeat}`);
-    console.log(`Qtd de jogos para finalizar: ${games.length}`);
+
+// function jogar (...games){
+//     let gamesToBeat = games.reduce((valor1, valor2) => valor1 + ", " + valor2);
+//     console.log(`Jogos para finalizar: ${gamesToBeat}`);
+//     console.log(`Qtd de jogos para finalizar: ${games.length}`);
+// }
+// jogar ("Mario","Zelda","Metroid");
+
+// //Call a function
+// let contador = 0;
+// function Contar() {
+//     contador++;
+// }
+// for (i = 0; i < 10; i++, Contar()) {
+//     //console.log(i);
+// }
+// console.log(contador);
+
+// //For Loop example with Ternary
+// for (i = 0; i < 3; i++){
+//     let cont = i == 1 ? "" : console.log (i);
+// }
+
+// // //For Loop with break
+// for (i = 0; i < 5; i++){
+//     if (i > 3){
+//         break;
+//     } console.log(i);
+// }
+
+forX: for (x = 0; x < 2; x++){
+    forY: for (y = x; y < 2; y++){
+        console.log (x, y);
+        break forY;
+    }
 }
-
-jogar ("Mario","Zelda","Metroid");
-
