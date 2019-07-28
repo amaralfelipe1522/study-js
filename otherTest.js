@@ -393,3 +393,5 @@ console.log(arrAll);
 //         break forY;
 //     }
 // }
+
+//Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
