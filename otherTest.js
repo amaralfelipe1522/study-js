@@ -394,8 +394,6 @@ console.log(arrAll);
 //     }
 // }
 
-// //Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
-
 // arrNumber = [0,1,2];
 
 // for (x = 0; x < arrNumber.length; x++){
@@ -407,12 +405,133 @@ console.log(arrAll);
 //     }
 // }
 
-arrNumber = [0,1,2,3,4,5,6,7,8,9];
+// arrNumber = [0,1,2,3,4,5,6,7,8,9];
 
-for (x = 0; x < arrNumber.length; x++){
-    for (y = 0; y < arrNumber.length; y++){
-        for (z = 0; z < arrNumber.length; z++){
-            console.log(arrNumber[x], arrNumber[y], arrNumber[z]);
-        }
-    }
-}
+// //Export flie.txt
+// function createFile (){
+//     var fs = require('fs');
+//     var stream = fs.createWriteStream("my_file.txt");
+//         stream.once('open', function(fd) {
+//         //stream.write(arrNumber[x], arrNumber[y], arrNumber[z], arrNumber[a], arrNumber[b], arrNumber[c], arrNumber[d], arrNumber[e], arrNumber[f], arrNumber[g]+" \n");
+//         stream.write("My first row"+count+" \n");
+//         stream.end();
+//     });
+// }
+
+// let count = 0;
+
+// for (x = 0; x < arrNumber.length; x++){
+//     for (y = 0; y < arrNumber.length; y++){
+//         for (z = 0; z < arrNumber.length; z++){
+//             for (a = 0; a < arrNumber.length; a++){
+//                 for (b = 0; b < arrNumber.length; b++){
+//                     for (c = 0; c < arrNumber.length; c++){
+//                         for (d = 0; d < arrNumber.length; d++){
+//                             for (e = 0; e < arrNumber.length; e++){
+//                                 for (f = 0; f < arrNumber.length; f++){
+//                                     forCuzao: for (g = 0; g < arrNumber.length; g++){
+//                                         count++;
+//                                         if (count == 2){
+//                                             break forCuzao;
+//                                         }
+//                                         createFile();
+//                                         //console.log(arrNumber[x], arrNumber[y], arrNumber[z], arrNumber[a], arrNumber[b], arrNumber[c], arrNumber[d], arrNumber[e], arrNumber[f], arrNumber[g]);
+//                                     }
+//                                 }
+//                             } 
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// //Example of Yield Function with FOR OF loop
+// //Função de exemplo para chamar na Yield Function
+// let incValue = 0;
+// function inc () {
+//     console.log (incValue+=1);
+// }
+
+// function* geradorYield () {
+//     yield inc();
+//     yield inc();
+//     yield inc();
+// }
+
+// for (let valores of geradorYield()) {
+//     console.log(valores);
+// }
+
+// let triggerYield = geradorYield();
+// console.log (triggerYield.next().valores);
+
+
+//Example FOR OF and STRING
+// let stringExample = "Itaquaquecetuba";
+// for (let caractere of stringExample) {
+//     console.log (caractere);
+// }
+
+
+// //Example FOR OF in Objects
+// let estojo = {
+//     1 : "Lápis",
+//     2 : "Caneta",
+//     3 : "Borracha"
+// };
+
+// // for (usingKeys of Object.keys (estojo)){
+// //     console.log (usingKeys);
+// // }
+
+// // for (usingValues of Object.values (estojo)){
+// //     console.log (usingValues);
+// // }
+
+// // for (usingEntries of Object.entries (estojo)){
+// //     console.log (usingEntries);
+// // }
+
+
+// //Example FOR IN in Objects
+// let estojo = {
+//     1 : "Lápis",
+//     2 : "Caneta",
+//     3 : "Borracha"
+// };
+
+// for (let values in estojo) {
+//     console.log (values, estojo[values]);
+// }
+
+
+// // Example of While Loop
+// let count = 0;
+// while (count++ < 10){
+//     console.log ("... "+count);
+// } console.log ("Fim: "+count);
+
+
+// //Example of Array.sort
+// let estojo = [
+//     { material : "Lápis", count: 14 },
+//     { material : "Caneta", count: 17 },
+//     { material : "Borracha", count: 9}
+// ];
+
+// //console.log(estojo);
+
+// let  my_sort = (a,b) => {
+//     console.log(a,b);
+//     //retorna um boolean par a operação abaixo:
+//     console.log (a.material > b.material);
+//     return a.material > b.material;
+// }
+// //Organiza os materiais em ordem alfabética
+// console.log (estojo.sort(my_sort));
+// console.log(estojo);
+
+
+// //Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
