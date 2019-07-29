@@ -331,7 +331,7 @@ console.log(arrAll);
 // let sizeArity = aridade.length;
 // console.log(sizeArity);
 
-// //Example of Curried Function
+//Example of Curried Function
 // let jogos1 = function (nome1){
 //     console.log (`Meu jogo favorito é ${nome1}.`)
 //     return function (nome2){
@@ -394,4 +394,25 @@ console.log(arrAll);
 //     }
 // }
 
-//Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
+// //Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
+
+// arrNumber = [0,1,2];
+
+// for (x = 0; x < arrNumber.length; x++){
+//     for (y = 0; y < arrNumber.length; y++){
+//         for (z = 0; z < arrNumber.length; z++){
+//             console.log(arrNumber[x], arrNumber[y], arrNumber[z]);
+//         }
+//         //console.log(arrNumber[x], arrNumber[y]);
+//     }
+// }
+
+arrNumber = [0,1,2,3,4,5,6,7,8,9];
+
+for (x = 0; x < arrNumber.length; x++){
+    for (y = 0; y < arrNumber.length; y++){
+        for (z = 0; z < arrNumber.length; z++){
+            console.log(arrNumber[x], arrNumber[y], arrNumber[z]);
+        }
+    }
+}
