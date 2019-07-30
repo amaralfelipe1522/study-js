@@ -534,4 +534,62 @@ console.log(arrAll);
 // console.log(estojo);
 
 
-// //Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse)
+// //Examples of Shallow and Deep Copy in objects (SPREAD and JSONParse) (Object Assignment vs. Primitive Assignment)
+// let a = {
+//     name : {
+//         firstName : "Felipe",
+//         surName : "Amaral"
+//     },
+//     age : 27
+// };
+// //with SPREAD = Shallow Copy
+// let b = {...a};
+// b.age=28;
+
+// //With Json = Deep Copy (Serialize and De-serialize)
+// let c = JSON.parse(JSON.stringify(a));
+// c.name.firstName = "Danilo";
+// c.name.surName = "Reis";
+// c.age = 28;
+
+// console.log ("Original object:");
+// console.log (a);
+// console.log ("With shallow copy:");
+// console.log (b);
+// console.log ("With deep copy:");
+// console.log (c);
+
+//Example of Array.forEach
+// let arr = ["ABC", "DEF", "GHI"];
+// let newArr = [];
+
+// let addNumbers = function (element, index, object) {
+//     newArr.push(element);
+//     console.log (newArr);
+// }
+// arr.forEach(addNumbers);
+
+// console.log(arr);
+// console.log(newArr);
+
+//or
+
+// let arr = ["ABC", "DEF", "GHI"];
+// let newArr = [];
+
+// arr.forEach ((element, index, object) => {newArr.push(element); console.log (newArr);});
+
+// console.log(arr);
+// console.log(newArr);
+
+// //Examples of Array.Every and Array.Some
+
+// let arrNumber = [1,2,3,40,5,6];
+
+// function maiorQue10 (valor) {
+//     console.log(valor)
+//     return valor > 10;
+// }
+
+// console.log(arrNumber.some(maiorQue10)); //vai repetir até retornar true
+// console.log(arrNumber.every(maiorQue10)); //vai repetir até retornar false
