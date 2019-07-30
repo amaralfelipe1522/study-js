@@ -593,3 +593,39 @@ console.log(arrAll);
 
 // console.log(arrNumber.some(maiorQue10)); //vai repetir até retornar true
 // console.log(arrNumber.every(maiorQue10)); //vai repetir até retornar false
+
+// //Example with array.filter
+// let arrNumber = [2,3,4,5,6,7,8];
+// function maiorQue (number) {
+//     return number > 5;
+// }
+// console.log(arrNumber.filter(maiorQue));
+//or
+// let arrNumber = [2,3,4,5,6,7,8];
+// let condition = (value => value > 5);
+// console.log(arrNumber.filter(condition));
+
+// //Example of Array.map and push
+// let arrNumber = [2,3,4,5,6,7,8];
+// let condition = (value => value + " map.");
+// let newArr = arrNumber.map(condition);
+// console.log(newArr);
+// let newArr2 =[];
+// newArr2.push(arrNumber,newArr);
+// console.log(newArr2);
+
+//or
+
+// let arrNumber = [2,3,4,5,6,7,8];
+// let arrResult = arrNumber.map (value => value = value + 10);
+// console.log (arrResult);
+
+//Another example of Array.Reduce
+let arrNumber = [2,10];
+let arrResult = arrNumber.reduce (value => value = value + 10);
+console.log (arrResult);
+
+
+
+
+
