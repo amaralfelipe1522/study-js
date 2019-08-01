@@ -660,4 +660,38 @@ console.log(arrAll);
 // console.log(array.map(x => [x, x * 2]));
 // console.log(array.flatMap(x => [x, x * 2]));
 
+//Matching Multiple Items
+// //String.match()
+// let string = "Paralelepipedo";
+// let stringResult = string.match(/lep/);
+// console.log (stringResult);
+// stringResult = string.match(/le/g);
+// console.log (stringResult);
+
+// //With regex.exec
+// const string = "azul*ceu preto*pe amarelo*urina";
+// const regex = /(?<cor>.*?)\*(?<coisa>[a-z0-9]+)/g;
+// while (stringRegex = regex.exec(string)) {
+//     let color = stringRegex[1]; //[0]
+//     let index = stringRegex.index;
+//     let coiso = stringRegex[2];
+//     let input = stringRegex.input;
+//     console.log (`A cor é ${color}, no indice ${index}, o coiso é ${coiso} e o input é: ${input}.`);
+//     console.log (stringRegex.groups.cor);
+//     console.log (stringRegex.groups.coisa);
+// }
+
+//With string.matchAll()
+
+// let string = "Paralelepipedo";
+// let walkString = string.matchAll(/[p]/);
+// for (let match of walkString) {
+//     console.log (match);
+// }
+
+//let string = "Paralelepipedo";
+let walkString = "Paralelepipedo".matchAll(/[p]/);
+for (let match of walkString) {
+    console.log (match);
+}
 
