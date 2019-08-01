@@ -620,12 +620,44 @@ console.log(arrAll);
 // let arrResult = arrNumber.map (value => value = value + 10);
 // console.log (arrResult);
 
-//Another example of Array.Reduce
-let arrNumber = [2,10];
-let arrResult = arrNumber.reduce (value => value = value + 10);
-console.log (arrResult);
+//A PORRA DA EXPLICAÇÃO DO THIS
+// CPonto
+// {
+// 	int x;
+// 	int y;
+// }
 
+// CQuadrado
+// {
+// 	CPonto p1
+// 	CPonto p2		
+// 	CPonto p3
+// 	CPonto p4
+// }
 
+// CDesenhoGeometrico
+// {
+// 	CQuadrado quadrado;
+// }
 
+// void IniciaQuadrado()
+// {
+// 	p1.x =0
+// 	p1.y =0
+
+// 	CGeometrico geometrico;
+
+// 	geometrico.quadrado = this;	
+// }
+
+// //Example of Array.flat()
+// let arrMulti = [1,2,3,4,[5,6,7,8,[9,10,11,12]]];
+// let arrSingle = arrMulti.flat().flat();
+// console.log(arrSingle);
+
+// //Example of Array.flatMap()
+// let array = [1,2,3,4,5];
+// console.log(array.map(x => [x, x * 2]));
+// console.log(array.flatMap(x => [x, x * 2]));
 
 
