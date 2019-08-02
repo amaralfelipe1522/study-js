@@ -683,15 +683,17 @@ console.log(arrAll);
 
 //With string.matchAll()
 
-// let string = "Paralelepipedo";
-// let walkString = string.matchAll(/[p]/);
-// for (let match of walkString) {
-//     console.log (match);
-// }
-
-//let string = "Paralelepipedo";
-let walkString = "Paralelepipedo".matchAll(/[p]/);
+string = "Paralelepipedo";
+walkString = string.matchAll(/[p]/g);
 for (let match of walkString) {
     console.log (match);
 }
+
+// let string = "Paralelepipedo";
+// let regex = RegExp('le*','g');
+// let walkString = string.matchAll(regex);
+
+// for (let match of walkString) {
+//     console.log (match);
+// }
 
