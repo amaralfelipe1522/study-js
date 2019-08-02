@@ -683,17 +683,44 @@ console.log(arrAll);
 
 //With string.matchAll()
 
-string = "Paralelepipedo";
-walkString = string.matchAll(/[p]/g);
-for (let match of walkString) {
-    console.log (match);
-}
-
-// let string = "Paralelepipedo";
-// let regex = RegExp('le*','g');
-// let walkString = string.matchAll(regex);
-
+// string = "Paralelepipedo";
+// walkString = string.matchAll(/[p]/g);
 // for (let match of walkString) {
 //     console.log (match);
 // }
 
+// let string = "Paralelepipedo";
+// let regex = RegExp('le*','g');
+// let walkString = string.matchAll(regex);
+// for (let match of walkString) {
+//     console.log (match);
+// }
+
+// //To validate ARRAY type (typeof)
+let arr1 = [1,2];
+let arr2 = [1,2];
+let arr3 = [1,3];
+
+function isArray (value) {
+    return typeof value.reduce == "function" &&
+    typeof value.filter == "function" &&
+    typeof value.map == "function" &&
+    typeof value.length == "number";
+}
+
+function areArrays (a, b) {
+    if ((isArray(a) !== isArray(b))){
+        return false;
+    }
+    if (a.length !== b.length){
+        return false;
+    }
+    for (let i = 0; i < a.length; i++){
+        if (a[i] !== b[i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(areArrays(arr1,arr2));
