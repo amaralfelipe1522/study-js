@@ -756,13 +756,32 @@ console.log(arrAll);
 // };
 // player.sayName();
 
-let hero = {name : "Red"};
-let rival = {name : "Green"};
-let sayName = function (){
-    console.log(this.name);
-}
+//2º With BIND
+// let hero = {name : "Red"};
+// let rival = {name : "Green"};
+// let sayName = function (){
+//     console.log(this.name);
+// }
+// let sayHeroName = sayName.bind(hero);
+// let sayRivalName = sayName.bind(rival);
+// sayHeroName();
+// sayRivalName();
 
-let sayHeroName = sayName.bind(hero);
-let sayRivalName = sayName.bind(rival);
-sayHeroName();
-sayRivalName();
+//3º With CALL and APPLY
+// let player = {
+//     name : "Goku",
+//     hp : 100,
+//     mp : 50,
+//     printStatus () {
+//         console.log(`O player ${this.name} tem ${this.hp} de HP e ${this.mp} de MP.`);
+//     }
+// };
+// const levelUP = function (hp,mp) {
+//     this.hp += hp;
+//     this.mp += mp;
+//     console.log ("LEVEL UP!!!");
+//     this.printStatus();
+// }
+// player.printStatus();
+// levelUP.call(player,5,2);
+// levelUP.apply(player,[5,2]);
