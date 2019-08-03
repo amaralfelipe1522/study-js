@@ -697,30 +697,72 @@ console.log(arrAll);
 // }
 
 // //To validate ARRAY type (typeof)
-let arr1 = [1,2];
-let arr2 = [1,2];
-let arr3 = [1,3];
+// let arr1 = [1,2];
+// let arr2 = [1,2];
+// let arr3 = [1,3];
+// function isArray (value) {
+//     return typeof value.reduce == "function" &&
+//     typeof value.filter == "function" &&
+//     typeof value.map == "function" &&
+//     typeof value.length == "number";
+// }
+// function areArrays (a, b) {
+//     if ((isArray(a) !== isArray(b))){
+//         return false;
+//     }
+//     if (a.length !== b.length){
+//         return false;
+//     }
+//     for (let i = 0; i < a.length; i++){
+//         if (a[i] !== b[i]){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(areArrays(arr1,arr2));
 
-function isArray (value) {
-    return typeof value.reduce == "function" &&
-    typeof value.filter == "function" &&
-    typeof value.map == "function" &&
-    typeof value.length == "number";
+//Anonymous Function
+// let time = 6000
+// setTimeout (function(){
+//     console.log (`Print in ${time/1000} second`);
+// },time);
+
+//in Chrome:
+// document.addEventListener("click", function(){
+//     console.log("Something was clicked.")
+// });
+
+// //Safeguarding Function Parameters
+// let funcMsg = function (){console.log("fudeu!");}
+// function Fparameters (text,number,array,object,func) {
+//     console.log(text);
+//     console.log(number);
+//     console.log(array);
+//     console.log(object);
+//     if (typeof func == "function"){
+//         func();
+//     }else console.log ("Is not a Function");
+// }
+// Fparameters("Texto", 123,[],{},funcMsg);
+
+// //More examples of THIS
+// //1º
+// let player = {
+//     name : "Felipe",
+//     sayName () {
+//         console.log (this.name);
+//     }
+// };
+// player.sayName();
+
+let hero = {name : "Red"};
+let rival = {name : "Green"};
+let sayName = function (){
+    console.log(this.name);
 }
 
-function areArrays (a, b) {
-    if ((isArray(a) !== isArray(b))){
-        return false;
-    }
-    if (a.length !== b.length){
-        return false;
-    }
-    for (let i = 0; i < a.length; i++){
-        if (a[i] !== b[i]){
-            return false;
-        }
-    }
-    return true;
-}
-
-console.log(areArrays(arr1,arr2));
+let sayHeroName = sayName.bind(hero);
+let sayRivalName = sayName.bind(rival);
+sayHeroName();
+sayRivalName();
