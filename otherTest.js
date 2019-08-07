@@ -785,3 +785,74 @@ console.log(arrAll);
 // player.printStatus();
 // levelUP.call(player,5,2);
 // levelUP.apply(player,[5,2]);
+
+//Example of Prototype
+//All functions in a single location of the memory
+const allFunctions = {
+    sleep(amount) {
+        this.status = "sleeping";
+        console.log (`${this.name} is ${this.status}.`);
+        this.hunger += 1;
+        this.energy += 1;
+        console.log(this.hunger,this.energy);
+    },
+    wakeUp(amount) {
+        this.status = "idle";
+        console.log (`${this.name} woke up.`);
+    },
+    eat(amount) {
+        this.status = "eating";
+        console.log (`${this.name} is ${this.status}`);
+        if (this.hunger -= amount <= 0){
+            this.energy += 1;
+        }this.wakeUp();
+        console.log(this.hunger, this.energy);
+    },
+    wander(amount) {
+        this.status = "wandering";
+        console.log (`${this.name} is ${this.status}`);
+        if (--this.energy < 1)
+            this.sleep(5);
+        console.log(this.energy);
+    }
+}
+
+function createCat (name, status,hunger,energy){
+    let cat = {};
+
+    cat.name = name;
+    cat.status = status;
+    cat.hunger = hunger;
+    cat.energy = energy;
+    
+    cat.sleep = allFunctions.sleep;
+    cat.wakeUp = allFunctions.wakeUp;
+    cat.eat = allFunctions.eat;
+    cat.wander = allFunctions.wander;
+
+    return cat;
+}
+
+let cat1 = createCat("Felix", "idle", 0, 1);
+console.log(cat1.sleep());
+let cat2 = createCat("Tom", "dead", 4, 3);
+console.log(cat2.wakeUp());
+
+
+// console.log(cat1.sleep());
+// console.log(cat2.sleep());
+// console.log(cat.sleep());
+// console.log(cat.wakeUp());
+// console.log(cat.wakeUp());
+// console.log(cat.wakeUp());
+// console.log(cat.eat(1));
+// console.log(cat.eat(2));
+// console.log(cat.eat(3));
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
+// console.log(cat.wander());
