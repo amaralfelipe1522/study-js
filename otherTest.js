@@ -786,56 +786,73 @@ console.log(arrAll);
 // levelUP.call(player,5,2);
 // levelUP.apply(player,[5,2]);
 
-//Example of Prototype
-//All functions in a single location of the memory
-const allFunctions = {
-    sleep() {
-        this.status = "sleeping";
-        console.log (`${this.name} is ${this.status}.`);
-        this.hunger += 1;
-        this.energy += 1;
-        console.log(this.hunger,this.energy);
-    },
-    wakeUp() {
-        this.status = "idle";
-        console.log (`${this.name} woke up.`);
-    },
-    eat(amount) {
-        this.status = "eating";
-        console.log (`${this.name} is ${this.status}: Qtd: ${amount}`);
-        if (this.hunger -= amount <= 0){
-            this.energy += 1;
-        }this.wakeUp();
-        console.log(this.hunger, this.energy);
-    },
-    wander() {
-        this.status = "wandering";
-        console.log (`${this.name} is ${this.status}`);
-        if (--this.energy < 1)
-            this.sleep(5);
-        console.log(this.energy);
+// //Example of Prototype
+// //All functions in a single location of the memory
+// const allFunctions = {
+//     sleep() {
+//         this.status = "sleeping";
+//         console.log (`${this.name} is ${this.status}.`);
+//         this.hunger += 1;
+//         this.energy += 1;
+//         console.log(this.hunger,this.energy);
+//     },
+//     wakeUp() {
+//         this.status = "idle";
+//         console.log (`${this.name} woke up.`);
+//     },
+//     eat(amount) {
+//         this.status = "eating";
+//         console.log (`${this.name} is ${this.status}: Qtd: ${amount}`);
+//         if (this.hunger -= amount <= 0){
+//             this.energy += 1;
+//         }this.wakeUp();
+//         console.log(this.hunger, this.energy);
+//     },
+//     wander() {
+//         this.status = "wandering";
+//         console.log (`${this.name} is ${this.status}`);
+//         if (--this.energy < 1)
+//             this.sleep(5);
+//         console.log(this.energy);
+//     }
+// }
+
+// function createCat (name, status,hunger,energy){
+//     let cat = Object.create(allFunctions);
+
+//     cat.name = name;
+//     cat.status = status;
+//     cat.hunger = hunger;
+//     cat.energy = energy;
+    
+//     ///Só é necessário quando criar o objeto como: let cat = {};
+//     // cat.sleep = allFunctions.sleep;
+//     // cat.wakeUp = allFunctions.wakeUp;
+//     // cat.eat = allFunctions.eat;
+//     // cat.wander = allFunctions.wander;
+
+//     return cat;
+// }
+
+// let cat1 = createCat("Felix", "idle", 0, 1);
+// console.log(cat1.sleep());
+// console.log(cat1.eat(5));
+// let cat2 = createCat("Tom", "dead", 4, 3);
+// console.log(cat2.wakeUp());
+
+//Class example
+class Player {
+    constructor (name, hp, mp, rest){
+        this.name = name;
+        this.hp = hp;
+        this.hp = mp;
+        this.rest = function () {
+            hp +=10;
+            mp +=10;
+            console.log(`Descansou... HP: ${hp} MP: ${mp}.`);
+            return rest;
+        }
     }
 }
-
-function createCat (name, status,hunger,energy){
-    let cat = Object.create(allFunctions);
-
-    cat.name = name;
-    cat.status = status;
-    cat.hunger = hunger;
-    cat.energy = energy;
-    
-    ///Só é necessário quando criar o objeto como: let cat = {};
-    // cat.sleep = allFunctions.sleep;
-    // cat.wakeUp = allFunctions.wakeUp;
-    // cat.eat = allFunctions.eat;
-    // cat.wander = allFunctions.wander;
-
-    return cat;
-}
-
-let cat1 = createCat("Felix", "idle", 0, 1);
-console.log(cat1.sleep());
-console.log(cat1.eat(5));
-let cat2 = createCat("Tom", "dead", 4, 3);
-console.log(cat2.wakeUp());
+let cloud = new Player("Cloud",100,50);
+cloud.rest();
