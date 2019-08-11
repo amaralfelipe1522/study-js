@@ -840,19 +840,19 @@ console.log(arrAll);
 // let cat2 = createCat("Tom", "dead", 4, 3);
 // console.log(cat2.wakeUp());
 
-//Class example
-class Player {
-    constructor (name, hp, mp, rest){
-        this.name = name;
-        this.hp = hp;
-        this.hp = mp;
-        this.rest = function () {
-            hp +=10;
-            mp +=10;
-            console.log(`Descansou... HP: ${hp} MP: ${mp}.`);
-            return rest;
-        }
-    }
-}
-let cloud = new Player("Cloud",100,50);
-cloud.rest();
+// //Class example
+// class Player {
+//     constructor (name, hp, mp, rest){
+//         this.name = name;
+//         this.hp = hp;
+//         this.hp = mp;
+//         this.rest = function () {
+//             hp +=10;
+//             mp +=10;
+//             console.log(`Descansou... HP: ${hp} MP: ${mp}.`);
+//             return rest;
+//         }
+//     }
+// }
+// let cloud = new Player("Cloud",100,50);
+// cloud.rest();
