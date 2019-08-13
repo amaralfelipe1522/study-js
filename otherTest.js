@@ -893,19 +893,6 @@ let prm =  new Promise ((resolve, reject) => {
         reject ("Invalid Password");
     }
 })
-
-
-   prm
-    .then(result => console.log("success: "+result))
-    .catch(err => console.log("oh noes! "+err))
-
-
-// .then((msg) => {
-//     console.log("Resolvido: "+ msg);
-// })
-// .catch((error) => {
-//     console.log("Rejeitado: "+ error);
-// });
-// .finally(() => {
-//     console.log("Acabou");
-// });
+.then((msg) => {console.log("Result: " + msg);})
+.catch((error) => {console.log("Result: " + error);})
+.finally(() => {console.log("Ending access test ...")});
