@@ -863,3 +863,49 @@ console.log(arrAll);
 // }
 // let setTimeToShow = setTimeout(showCallback,2000);
 
+//posição do mouse
+//Por elemento na pagina:
+// document.getElementById ("custom-bg").onclick = function (event) {
+//     console.log(event);
+//     }
+//     window.onmousemove = function(event) {
+//         let mouseX = event.pageX;
+//         let mouseY = event.pageY;
+//         let localX = event.clientX;
+//         let localY = event.clientY;
+//     }   
+//Geral
+// window.onclick = function (event) {
+//                 let mouseX = event.pageX;
+//                 let mouseY = event.pageY;
+//     let localX = event.clientX;
+//     let localY = event.clientY;
+//                 console.log(event);
+// }
+    
+//Promise
+
+let pwd = "qwe123";
+let prm =  new Promise ((resolve, reject) => {
+    if (pwd == "qwe123") {
+        resolve ("Correct Password");
+    } else {
+        reject ("Invalid Password");
+    }
+})
+
+
+   prm
+    .then(result => console.log("success: "+result))
+    .catch(err => console.log("oh noes! "+err))
+
+
+// .then((msg) => {
+//     console.log("Resolvido: "+ msg);
+// })
+// .catch((error) => {
+//     console.log("Rejeitado: "+ error);
+// });
+// .finally(() => {
+//     console.log("Acabou");
+// });
