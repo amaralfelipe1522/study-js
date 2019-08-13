@@ -18,3 +18,23 @@ export default class Vessel {
         console.log (`Cooking in ${this.material} ${this.type}`);
     }
 };
+
+class Pan extends Vessel {
+    constructor (material) {
+        super(material, "frying pan");
+    }
+};
+
+class Pot extends Vessel {
+    constructor (material) {
+        super (material, "cooking pot");
+    }
+};
+
+class Tray extends Vessel {
+    constructor (material) {
+        super (material, "baking tray");
+    }
+};
+
+export {Vessel, Pan, Pot, Tray};

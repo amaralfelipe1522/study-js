@@ -818,18 +818,17 @@ console.log(arrAll);
 // }
 
 // function createCat (name, status,hunger,energy){
-//     let cat = Object.create(allFunctions);
+//     let cat = {};
 
 //     cat.name = name;
 //     cat.status = status;
 //     cat.hunger = hunger;
 //     cat.energy = energy;
     
-//     ///Só é necessário quando criar o objeto como: let cat = {};
-//     // cat.sleep = allFunctions.sleep;
-//     // cat.wakeUp = allFunctions.wakeUp;
-//     // cat.eat = allFunctions.eat;
-//     // cat.wander = allFunctions.wander;
+//     cat.sleep = allFunctions.sleep;
+//     cat.wakeUp = allFunctions.wakeUp;
+//     cat.eat = allFunctions.eat;
+//     cat.wander = allFunctions.wander;
 
 //     return cat;
 // }
@@ -840,19 +839,27 @@ console.log(arrAll);
 // let cat2 = createCat("Tom", "dead", 4, 3);
 // console.log(cat2.wakeUp());
 
-// //Class example
-// class Player {
-//     constructor (name, hp, mp, rest){
-//         this.name = name;
-//         this.hp = hp;
-//         this.hp = mp;
-//         this.rest = function () {
-//             hp +=10;
-//             mp +=10;
-//             console.log(`Descansou... HP: ${hp} MP: ${mp}.`);
-//             return rest;
-//         }
+
+//Events
+// //Synthetic Event
+
+// let info = {
+//     detail : {
+// 		position : [125,210],
+// 		info : "map location"
 //     }
+// };
+// let eventPin = new CustomEvent ("pin", info);
+// let callback = function (event) {
+//     console.log (event);
+// };
+// document.addEventListener ("pin", callback);
+// document.dispatchEvent(eventPin);
+
+////////////
+
+// let showCallback = function () {
+//     console.log ("CAMPINAS NÃO");
 // }
-// let cloud = new Player("Cloud",100,50);
-// cloud.rest();
+// let setTimeToShow = setTimeout(showCallback,2000);
+

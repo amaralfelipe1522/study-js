@@ -1,10 +1,10 @@
-import Ingredient from "./ingredient.js";
+const Ingredient = require("./ingredient")
 
-export default class Fridge {
+class Fridge {
     constructor (ingredients) {
         this.items = ingredients;
     }
-    get (type) {
+    getIngredientType (type) {
         return this.items.filter (i => i.type == type, 0);
     }
 };
@@ -13,6 +13,8 @@ const ingredients = ["water", "olive_oil", "broth", "red_wine", "bay_leaf", "pep
 
 let Frigidaire = new Fridge (ingredients);
 
-let vegetables = Frigidaire.get (Ingredient.vegetable);
+let vegetables = Frigidaire.getIngredientType (Ingredient.vegetable);
 
 console.log(vegetables);
+
+module.exports = Fridge

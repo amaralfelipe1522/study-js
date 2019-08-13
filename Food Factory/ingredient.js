@@ -1,4 +1,4 @@
-export default class Ingredient {
+module.exports = class Ingredient {
     constructor (name, type, calories) {
         this.name = name;
         this.type = type;
