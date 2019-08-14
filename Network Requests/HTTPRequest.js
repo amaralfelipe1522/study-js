@@ -23,15 +23,15 @@
 
 //////////////////////////////
 const http = new XMLHttpRequest();
-const url = "https://ultrabot.mybluemix.net/chat/ZmVsaXBlLmFzb3V6YQ==";
+const url = "https://httpstat.us/200";
 http.open("GET",url);
 http.send();
 http.onreadystatechange = function(event) {
-    let promise =  new Promise ((resolve, reject) => {
+    return new Promise ((resolve, reject) => {
         if (event.currentTarget.readyState == 4 && event.currentTarget.status == 200) {
-            resolve ("Access successfully.");
+            resolve (event.currentTarget.responseText);
         } else {
-            reject ("Invalid access.");
+            reject (event.currentTarget.responseText);
         }
     })
     .then((msg) => {console.log("Result: " + msg);})
