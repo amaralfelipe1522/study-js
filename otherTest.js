@@ -885,14 +885,29 @@ console.log(arrAll);
     
 //Promise
 
-let pwd = "qwe123";
-let prm =  new Promise ((resolve, reject) => {
-    if (pwd == "qwe123") {
-        resolve ("Correct Password");
-    } else {
-        reject ("Invalid Password");
-    }
-})
-.then((msg) => {console.log("Result: " + msg);})
-.catch((error) => {console.log("Result: " + error);})
-.finally(() => {console.log("Ending access test ...")});
+// let pwd = "qwe123";
+// let prm =  new Promise ((resolve, reject) => {
+//     if (pwd == "qwe123") {
+//         resolve ("Correct Password");
+//     } else {
+//         reject ("Invalid Password");
+//     }
+// })
+// .then((msg) => {console.log("Result: " + msg);})
+// .catch((error) => {console.log("Result: " + error);})
+// .finally(() => {console.log("Ending access test ...")});
+
+async function msg1 () {
+    let value = 0;
+    for (i=0 ;i<10 ;i++) {
+        value += await i;
+    };
+    return await ("Primeiro" + value);
+}
+
+async function msg2 () {
+    return await ("Segundo");
+}
+
+msg1().then(console.log);
+msg2().then(console.log);

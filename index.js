@@ -56,3 +56,5 @@ function createUl () {
 
 let f = createUl();
 let commit = f[0];
+
+//https://newsapi.org/v2/everything?domains=wsj.com&apiKey=19342bb946104beb87d7d53b5023c7c7
