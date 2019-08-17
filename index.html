@@ -22,9 +22,12 @@
         <!-- <button onclick="createButton()">Create Button</button> -->
         Games: <input type="text" id="testiculo"><br><br>
         <input type="button" onclick="commit()" value="Enviar">
-        <p id="resultID"></p>
-
+        <!-- <p id="resultID"></p> -->
+        <input type="button" onclick="startConnection()" value="Buscar Notícias">
+        <div id="news">
+        </div>
         <script src="" async defer></script>
     </body>
     <script src="index.js"></script>
+    <script>const axios = require("axios");</script>
 </html>

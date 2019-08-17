@@ -897,17 +897,30 @@ console.log(arrAll);
 // .catch((error) => {console.log("Result: " + error);})
 // .finally(() => {console.log("Ending access test ...")});
 
-async function msg1 () {
-    let value = 0;
-    for (i=0 ;i<10 ;i++) {
-        value += await i;
-    };
-    return await ("Primeiro" + value);
-}
+// async function msg1 () {
+//     let value = 0;
+//     for (i=0 ;i<10 ;i++) {
+//         value += await i;
+//     };
+//     return await ("Primeiro" + value);
+// }
 
-async function msg2 () {
-    return await ("Segundo");
-}
+// async function msg2 () {
+//     return await ("Segundo");
+// }
 
-msg1().then(console.log);
-msg2().then(console.log);
+// msg1().then(console.log);
+// msg2().then(console.log);
+
+let arr = [
+    {
+        id : 1,
+        title : "Não vou para o Canadá."
+    },
+    {
+        id : 2,
+        title : "Quero segunda-feira logo."
+    }
+];
+
+console.log(arr[0]);

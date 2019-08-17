@@ -1,7 +1,4 @@
-function importar (){
-    console.log("importou");
-};
-importar();
+const axios = require("axios");
 
 // (function createButton(){
 //     var button = document.createElement('button');
@@ -36,25 +33,49 @@ importar();
 //     return [commit]
 // };
 
+/////////////////////////////////////////
 
+// function createUl () {
+//     var ul = document.createElement("ul");
+//     ul.setAttribute("id","idUl");
+//     document.body.appendChild(ul);
+//     console.log(ul);
+//     function commit() {
+//         let valor = document.getElementById("testiculo").value;
+//         document.getElementById("testiculo").value = '';
+//         var li = document.createElement("li");
+//         li.setAttribute ("id",`idLi`);
+//         li.innerHTML = valor;
+//         ul.appendChild(li);
+//     }
+//     return [commit]
+// };
 
-function createUl () {
-    var ul = document.createElement("ul");
-    ul.setAttribute("id","idUl");
-    document.body.appendChild(ul);
-    console.log(ul);
-    function commit() {
-        let valor = document.getElementById("testiculo").value;
-        document.getElementById("testiculo").value = '';
-        var li = document.createElement("li");
-        li.setAttribute ("id",`idLi`);
-        li.innerHTML = valor;
-        ul.appendChild(li);
-    }
-    return [commit]
-};
+// let f = createUl();
+// let commit = f[0];
 
-let f = createUl();
-let commit = f[0];
+////////////////////////////////////
 
-//https://newsapi.org/v2/everything?domains=wsj.com&apiKey=19342bb946104beb87d7d53b5023c7c7
+let url = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=19342bb946104beb87d7d53b5023c7c7"
+let news;
+let startConnection = function () {
+    axios.get(url)
+    .then((data) => {
+        if (data.status == 200) {
+            console.log("OK!!");
+            let total = data.data.articles;
+            for (i = 0; i < total.length; i++) {
+                news = data.data.articles[i];
+                getNews(news);
+            }
+        } else {
+            console.log(data);
+        }
+        
+    })
+    .catch((err) => {console.log(err)});
+}
+startConnection();
+let getNews = function (news) {
+    console.log (news);
+}
