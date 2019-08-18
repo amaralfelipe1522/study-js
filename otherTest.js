@@ -912,15 +912,40 @@ console.log(arrAll);
 // msg1().then(console.log);
 // msg2().then(console.log);
 
-let arr = [
-    {
-        id : 1,
-        title : "Não vou para o Canadá."
-    },
-    {
-        id : 2,
-        title : "Quero segunda-feira logo."
-    }
-];
+// let arr = [
+//     {
+//         id : 1,
+//         title : "Não vou para o Canadá."
+//     },
+//     {
+//         id : 2,
+//         title : "Quero segunda-feira logo."
+//     }
+// ];
 
-console.log(arr[0]);
+// console.log(arr[0]);
+
+let generator = function*() {
+    try {
+        yield console.log("EU");
+        yield console.log("NÃO");
+        yield console.log("VOU");
+        yield console.log("PARA");
+        yield console.log("CAMPINAS");
+        yield console.log("POR%@!!!");
+    }catch (error) {
+        console.log ("Deu ruim, manda mais curriculos... "+error);
+    }
+}
+
+let gen = generator();
+
+gen.next();
+gen.next();
+gen.next();
+gen.next();
+gen.next();
+gen.next();
+gen.next();
+gen.throw(new Error("AAAAAAAAAAAAHHHH"));
+
