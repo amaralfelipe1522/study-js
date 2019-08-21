@@ -925,27 +925,62 @@ console.log(arrAll);
 
 // console.log(arr[0]);
 
-let generator = function*() {
-    try {
-        yield console.log("EU");
-        yield console.log("NÃO");
-        yield console.log("VOU");
-        yield console.log("PARA");
-        yield console.log("CAMPINAS");
-        yield console.log("POR%@!!!");
-    }catch (error) {
-        console.log ("Deu ruim, manda mais curriculos... "+error);
-    }
+//Example of Generator
+// let generator = function*() {
+//     try {
+//         yield console.log("EU");
+//         yield console.log("NÃO");
+//         yield console.log("VOU");
+//         yield console.log("PARA");
+//         yield console.log("CAMPINAS");
+//         yield console.log("POR%@!!!");
+//     }catch (error) {
+//         console.log ("Deu ruim, manda mais curriculos... "+error);
+//     }
+// }
+
+// let gen = generator();
+
+// gen.next();
+// gen.next();
+// gen.next();
+// gen.next();
+// gen.next();
+// gen.next();
+// gen.next();
+// gen.throw(new Error("AAAAAAAAAAAAHHHH"));
+
+// //Example of Call Stack
+// function pedirDemissao() {
+//     console.log("Eu me demito e obrigado por tudo!");
+//     throw new Error ("Treinar o meu substituto..");
+// }
+
+// function passarNaEntrevista() {
+//     console.log("Entrevistadora: Entraremos em contato nos próximos dias, não pera.. VOCÊ PASSOU!!");
+//     pedirDemissao();
+// }
+
+// function procurarEmprego(qtdCV) {
+//     console.log(`Entrando na APinfo e enviando ${qtdCV} curriculos..`);
+//     passarNaEntrevista();
+// }
+
+// procurarEmprego(5);
+
+
+var obj = {text : "Example of"};
+
+function helloWorld(a, b, c) {
+    return this.text+" "+ a +", "+ b +" and "+ c +".";  
 }
+//o THIS deixa de ter o valor "window" e passa a ser o "obj"
+console.log(helloWorld.call(obj,"CALL","APPLY","BIND"));
+//igual ao CALL, mas é possível passar argumentos com Array
+let args = ["CALL","APPLY","BIND"];
+console.log(helloWorld.apply(obj,args));
+//Cria uma função de ligação definindo também o "obj" como o THIS
+let boundFunction = helloWorld.bind(obj);
+console.log(boundFunction("CALL","APPLY","BIND"));
 
-let gen = generator();
-
-gen.next();
-gen.next();
-gen.next();
-gen.next();
-gen.next();
-gen.next();
-gen.next();
-gen.throw(new Error("AAAAAAAAAAAAHHHH"));
 
