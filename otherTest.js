@@ -967,3 +967,28 @@ console.log(arrAll);
 // }
 
 // procurarEmprego(5);
+<<<<<<< HEAD
+=======
+
+
+// var obj = {text : "Example of"};
+
+// function helloWorld(a, b, c) {
+//     return this.text+" "+ a +", "+ b +" and "+ c +".";  
+// }
+// //o THIS deixa de ter o valor "window" e passa a ser o "obj"
+// console.log(helloWorld.call(obj,"CALL","APPLY","BIND"));
+// //igual ao CALL, mas é possível passar argumentos com Array
+// let args = ["CALL","APPLY","BIND"];
+// console.log(helloWorld.apply(obj,args));
+// //Cria uma função de ligação definindo também o "obj" como o THIS
+// let boundFunction = helloWorld.bind(obj);
+// console.log(boundFunction("CALL","APPLY","BIND"));
+
+// //MONGODB
+// Linux (ubuntu)
+// https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+
+// Windows
+// https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+>>>>>>> f7969e36fab80073d5aa2a0d644a6119b7f4ef0a
