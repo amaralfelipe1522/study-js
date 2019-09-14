@@ -967,8 +967,6 @@ console.log(arrAll);
 // }
 
 // procurarEmprego(5);
-<<<<<<< HEAD
-=======
 
 
 // var obj = {text : "Example of"};
@@ -991,4 +989,19 @@ console.log(arrAll);
 
 // Windows
 // https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
->>>>>>> f7969e36fab80073d5aa2a0d644a6119b7f4ef0a
+
+
+// API DOLAR
+let retorno = {
+    "@odata.context":"https://was-p.bcnet.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata$metadata#_CotacaoDolarPeriodo(cotacaoCompra)",
+    "value": [
+        {
+            "cotacaoCompra":4.1575
+        }
+    ]
+}
+
+var dolarAtual = retorno['value'][0]['cotacaoCompra'];
+console.log(dolarAtual);
+
+
