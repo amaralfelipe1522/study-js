@@ -12,7 +12,7 @@ Alguns itens de estudo que contemplam este repositório:
 - Estruturas de fluxo;
 - Arrays (e manipulação destes com map, filter, reduce)
 - Objetos;
-- Ajax Requests (fetch, dentre outras);
+- Ajax Requests (fetch, axios, etc);
 - Node.JS (criação de web server com node + express)
 
 To Do:
