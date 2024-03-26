@@ -14,7 +14,7 @@
   "author": "Felipe Amaral",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.3",
+    "express": "4.19.2",
     "marko": "4.13.4-1",
     "sqlite": "^3.0.3"
   },
